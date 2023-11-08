@@ -1,0 +1,81 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMGUyMzllZi02OWY3LTRhYWMtOTQyNy1kNTRlYjBlOTI2NzIiLCJuaWsiOiIxMjM0NTY3ODkxMTExMTExIiwibmFtZSI6InJhbWEiLCJlbWFpbCI6InJhbWFAZ21haWwuY29tIiwiaWF0IjoxNjk5NDMzNzQxLCJleHAiOjE2OTk0MzQ3NDF9.Q5Jb4JRJ5SVixXXloxQFyMoNfwyPkRT5sO9MWH-8nh0
+
+###
+GET http://localhost:5000/token
+
+###
+GET http://localhost:5000/blog
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "nik": "1234567891111111",
+    "name": "rama",
+    "email": "rama@gmail.com",
+    "password": "fadli123",
+    "confPassword": "fadli123"
+}
+
+###
+POST http://localhost:5000/registeradm
+Content-Type: application/json
+
+{
+    "nik": "123456789",
+    "name": "ibrahim",
+    "email": "ibrahim@gmail.com",
+    "password": "12345678",
+    "confPassword": "12345678"
+}
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "name": "rama",
+    "password": "fadli123"
+}
+
+###
+POST http://localhost:5000/forgot
+Content-Type: application/json
+
+{
+    "email": "rama@gmail.com"
+}
+
+###
+POST http://localhost:5000/reset
+Content-Type: application/json
+
+{
+    "token": "9f75d6f10855935e1ca4bd470551897f184bc477",
+    "newPassword": "123"
+}
+
+###
+POST http://localhost:5000/profil
+Content-Type: application/json
+
+{
+    "tanggal_lahir": "29-06-09",
+    "no_telp": "07273822888",
+    "alamat": "jdfjdfjdjfj"
+}
+
+###
+POST http://localhost:5000/pengajuan
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhMGUyMzllZi02OWY3LTRhYWMtOTQyNy1kNTRlYjBlOTI2NzIiLCJuaWsiOiIxMjM0NTY3ODkxMTExMTExIiwibmFtZSI6InJhbWEiLCJlbWFpbCI6InJhbWFAZ21haWwuY29tIiwiaWF0IjoxNjk5NDQ4NDY4LCJleHAiOjE2OTk0NDk0Njh9.VIgW1e6wgo6YqOYhOGpX08uE15l5l19KfAqJsK2ToR0
+Content-Type: application/json
+
+{
+    "no_telepon": "08380823098",
+    "alamat": "jln.kebon jeruk 18"
+}
+
+###
+DELETE http://localhost:5000/logout
